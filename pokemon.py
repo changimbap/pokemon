@@ -6,6 +6,8 @@ import csv
 import os
 
 from selenium.webdriver.chrome.options import Options
+
+from selenium.webdriver.chrome.service import Service
 service = Service(executable_path="/usr/bin/chromedriver")
 
 options = Options()
