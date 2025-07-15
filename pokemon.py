@@ -6,6 +6,7 @@ import csv
 import os
 
 from selenium.webdriver.chrome.options import Options
+service = Service(executable_path="/usr/bin/chromedriver")
 
 options = Options()
 options.add_argument("--headless") # 창 없음
@@ -28,7 +29,7 @@ driver.close()
 pokemon_exist = os.path.exists("pokemon.csv")
 header = ["no", "name"]
 
-with open("pokemon.csv", "a") as file:
+with open("pokemon.csv", "a", newline="") as file:
     writer = csv.writer(file)
 
     if not pokemon_exist:
